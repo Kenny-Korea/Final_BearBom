@@ -25,7 +25,7 @@ const RecentTransaction = () => {
     <>
       <div className="recenttransaction">
         <h5>
-          <strong>최근 주문 내역</strong>
+          <strong>최근 활동 내역</strong>
         </h5>
         <hr />
         {fetchedData ? (
