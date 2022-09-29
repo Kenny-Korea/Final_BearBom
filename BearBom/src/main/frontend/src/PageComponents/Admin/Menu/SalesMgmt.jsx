@@ -16,7 +16,10 @@ const SalesMgmt = () => {
       },
     }).then((res) => {
       console.log(res.data.getAdminOrderList);
-      setFetchedData(res.data.getAdminOrderList);
+      let array = res.data.getAdminOrderList.filter((a) => {
+        return a.paymentDate !== null;
+      });
+      setFetchedData(array);
     });
   }, []);
   return (

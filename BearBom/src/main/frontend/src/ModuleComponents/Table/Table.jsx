@@ -202,6 +202,26 @@ const Table = ({ tableInfo, fetchedData }) => {
             )}
           </td>
         );
+        // 관리자 주문 상태 확인 버튼
+      } else if (tableInfo[i].title === "주문여부") {
+        tableItem.push(
+          <td className={insertClass(i)}>
+            {element[tableInfo[i].cell] === "Y" ? (
+              <div className="approved">결제완료</div>
+            ) : element[tableInfo[i].cell] === "N" ? (
+              <div className="deleted">미결제</div>
+            ) : (
+              <button
+                className="pending"
+                onClick={() => {
+                  onClickApprove(element.courseIdx);
+                }}
+              >
+                미승인
+              </button>
+            )}
+          </td>
+        );
         // 관리자 상태 확인 버튼
       } else if (tableInfo[i].title === "상태") {
         tableItem.push(
@@ -238,7 +258,19 @@ const Table = ({ tableInfo, fetchedData }) => {
             )}
           </td>
         );
-
+        // 관리자 주문 상태 확인 버튼
+      } else if (tableInfo[i].title === "역할") {
+        tableItem.push(
+          <td className={insertClass(i)}>
+            {element[tableInfo[i].cell] === "ROLE_LECTURER" ? (
+              <div className="approved">강사</div>
+            ) : element[tableInfo[i].cell] === "ROLE_ADMIN" ? (
+              <div className="deleted">관리자</div>
+            ) : (
+              <div>일반</div>
+            )}
+          </td>
+        );
         // 관리자 유저 추방 버튼
       } else if (tableInfo[i].title === "삭제") {
         tableItem.push(
@@ -309,7 +341,6 @@ const Table = ({ tableInfo, fetchedData }) => {
             <div className="search">
               <select
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setSortType(e.target.value);
                 }}
                 name="sort"
