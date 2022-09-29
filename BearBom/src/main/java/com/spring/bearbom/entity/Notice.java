@@ -27,7 +27,7 @@ public class Notice {
     private LocalDateTime noticeRegdate = LocalDateTime.now().plusHours(9);
 
     @Column
-    private LocalDateTime noticeMdfdate;
+    private LocalDateTime noticeMdfdate=LocalDateTime.now().plusHours(9);
 
     @Column(nullable = false,columnDefinition = "char(1)")
     private char noticeUseYn = 'Y';

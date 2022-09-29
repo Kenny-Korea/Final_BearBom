@@ -74,11 +74,9 @@ export const openedClassItems = [
   new Data("강의번호", "l10", "courseIdx"),
   new Data("이미지", "l10", "courseThumbnailNm"),
   new Data("강의명", "l30", "courseNm"),
-  // new Data("강사명", "l10", "user"),
-  new Data("개설일", "l10", "courseRegdate"), // 없음
+  new Data("개설일", "l10", "courseRegdate"),
   new Data("시작일", "l10", "courseStDate"),
   new Data("종료일", "l10", "courseEndDate"),
-  // new Data("상태", "l20", "status"), // 없음
 ];
 
 // 개인 정보 수정
@@ -152,12 +150,11 @@ export const userMgmtItems = [
   new Data("아이디", "l10", "userId"),
   new Data("이름", "l10", "userNm"),
   new Data("닉네임", "l10", "userNickName"),
+  new Data("역할", "l10", "role"),
   new Data("이메일", "l10", "userEmail"),
   new Data("연락처", "l10", "userTel"),
   new Data("연락처", "l20", "userAddress"),
-  new Data("삭제", "l5", "delete"), // 없음
-
-  // new Data("가입일", "l10", "userRegdate"),
+  new Data("삭제", "l5", "delete"),
 ];
 
 // 강좌 관리
