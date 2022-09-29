@@ -39,7 +39,7 @@ export default function HoverRating(review) {
       </Typography>
       <Rating
         name="hover-feedback"
-        value={review.courserRate}
+        value={parseFloat(review.courserRate)}
         precision={1}
         //   getLabelText={feedback}
         //   onChange={(event, newValue) => {

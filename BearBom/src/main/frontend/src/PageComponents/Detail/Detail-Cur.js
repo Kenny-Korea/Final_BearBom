@@ -11,9 +11,8 @@ function Cur({ course }) {
           className="detail-text-area"
           readOnly
           style={{ resize: "none" }}
-        >
-          {course.courseLevelContent}
-        </textarea>
+          value={course.courseLevelContent}
+        ></textarea>
       </div>
     </>
   );
