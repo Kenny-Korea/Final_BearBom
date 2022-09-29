@@ -13,6 +13,10 @@ function Review({ review }) {
   function getFee(isMember) {
     return isMember ? "$2.00" : "$10.00";
   }
+
+  useEffect(() => {
+    console.log(review);
+  }, [review]);
   var result1 = dayday3 >= 1 ? `${(result1 = parseInt(dayday3))}일전` : "방금";
   console.log(review.user.userPhotoNewNm);
   return (
@@ -36,9 +40,10 @@ function Review({ review }) {
         </div>
 
         <div>
-          <textarea className="review-text-area">
-            {review.courserContent}
-          </textarea>
+          <textarea
+            className="review-text-area"
+            value={review && review.courserContent}
+          ></textarea>
         </div>
       </div>
     </>

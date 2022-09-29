@@ -25,8 +25,6 @@ const Detail = () => {
   const location = useLocation(); //URL을
   const [CurCnt, setCurCnt] = useState(0);
   const [teacherInfo, setTeacherInfo] = useState();
-  // const userId = localStorage.getItem("USER_ID"); //유저 아이디를
-  // const navigate = useNavigate(); //결제를 위한 navigate
 
   //리뷰정보 불러오기
   const list = () => {
@@ -48,7 +46,7 @@ const Detail = () => {
   useEffect(() => {
     let copy = reviewData.concat(reviewList.slice(4 * cnt, 4 * (cnt + 1)));
 
-    setReviewData(copy);
+    setReviewData((prev) => copy);
   }, [cnt]);
 
   //리뷰등록 담을 State
@@ -70,9 +68,10 @@ const Detail = () => {
       },
       data: reviewInfo,
     }).then((response) => {
+      console.log(response.data);
       setReviewList(response.data.reviewList);
       setaverageRating(response.data.averageRating);
-      setReviewData(response.data.reviewList.slice(0, 4));
+      setReviewData((prev) => response.data.reviewList.slice(0, 4));
       setCnt(0);
     });
   };
@@ -128,11 +127,15 @@ const Detail = () => {
       setCurCnt(response.data.getCourseCurCnt);
       setaverageRating(response.data.averageRating);
       setReviewList(response.data.reviewList);
-      setReviewData(response.data.reviewList.slice(0, 4));
+      setReviewData((prev) => response.data.reviewList.slice(0, 4));
       setTeacherInfo(response.data.userInfo);
     });
   }, []);
-  console.log(teacherInfo);
+
+  useEffect(() => {
+    console.log(reviewData);
+  }, [reviewData]);
+
   return (
     <>
       {teacherInfo ? (

@@ -10,9 +10,8 @@ function ClassContents({ course }) {
           className="detail-text-area"
           readOnly
           style={{ resize: "none" }}
-        >
-          {course.courseContents}
-        </textarea>
+          value={course.courseContents}
+        ></textarea>
       </div>
     </>
   );
