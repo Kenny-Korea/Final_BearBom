@@ -1,7 +1,7 @@
 <h1><img src="https://user-images.githubusercontent.com/107159105/192440999-c585aba8-e23a-4092-9776-d99217f559b0.png" width="30" height="30">
  베어봄 (Bear-Bom)</h1>
-<p>평범하게 반복되는 하루들과, 할일 없는 주말을 알차게 보내기위해 <br>
-  각종 취미 생활과 기술을 배울 수 있는 <b>관심분야별 매칭 플랫폼</b></p><br>
+<p>평범하게 반복되는 하루, 주말을 취미로 채우기위해<br>
+각종 취미 생활과 기술을 배울 수 있는 관심분야별 <b>원데이 클래스 플랫폼입니다.</b></p><br>
 
 
 <h1><img src="https://cdn.icon-icons.com/icons2/2104/PNG/512/calendar_icon_129329.png"  width="30" height="30"> 프로젝트 기간</h1>
