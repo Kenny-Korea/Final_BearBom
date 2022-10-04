@@ -51,5 +51,5 @@
 
 <h1>:open_file_folder: 베어봄 발표영상 & PPT</h1><br>
 <a href="#" target="_blank">베어봄 시연 영상</a><br>
-<a href="#" target="_blank">베어봄 PPT</a>
+<a href="https://absorbed-paste-b47.notion.site/BearBom-8a1aed920e614eceab1d22347ee22c89" target="_blank">베어봄 PPT</a>
 <br><br>
